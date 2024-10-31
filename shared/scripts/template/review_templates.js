@@ -27,7 +27,7 @@ function getReviewWLinkTemplate(review, business_user, reviewer) {
     return `
                         <div class="card d_flex_cs_gm f_d_c">
                             <div class="d_flex_cs_gm f_d_r_resp_c">
-                                <img class="profile_img_small" src="${getPersonImgPath(reviewer.user.file)}" alt="Benutzeravatar">
+                                <img onclick="redirectToCustomerProfile(${reviewer.user.pk})" class="profile_img_small c_pointer" src="${getPersonImgPath(reviewer.user.file)}" alt="Benutzeravatar">
                                 <div>
                                     <h3 class="link c_black w_full" onclick="redirectToCustomerProfile(${reviewer.user.pk})">${reviewer.user.first_name} ${reviewer.user.last_name}</h3>
                                     <div class="review_stars">
