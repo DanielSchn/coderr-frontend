@@ -194,7 +194,15 @@ async function deleteData(endpoint) {
             headers: createHeaders(),
         });
 
-        const responseData = await response.json();
+        let responseData = null;
+        if (response.status !== 204) { 
+            try {
+                responseData = await response.json();
+            } catch (error) {
+                console.warn('Kein gültiges JSON im Response:', error);
+                responseData = null;
+            }
+        }
         return {
             ok: response.ok,
             status: response.status,
