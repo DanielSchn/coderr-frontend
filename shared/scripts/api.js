@@ -1,28 +1,28 @@
 
 function setAuthCredentials(token, userId, username) {
-    localStorage.setItem('auth-token', token);
-    localStorage.setItem('auth-user', username);
-    localStorage.setItem('auth-user-id', userId);
+    sessionStorage.setItem('auth-token', token);
+    sessionStorage.setItem('auth-user', username);
+    sessionStorage.setItem('auth-user-id', userId);
 }
 
 
 
 function removeAuthCredentials() {
-    localStorage.removeItem('auth-token');
-    localStorage.removeItem('auth-user');
-    localStorage.removeItem('auth-user-id');
+    sessionStorage.removeItem('auth-token');
+    sessionStorage.removeItem('auth-user');
+    sessionStorage.removeItem('auth-user-id');
 }
 
 function getAuthToken() {
-    return localStorage.getItem('auth-token');
+    return sessionStorage.getItem('auth-token');
 }
 
 function getAuthUser() {
-    return localStorage.getItem('auth-user');
+    return sessionStorage.getItem('auth-user');
 }
 
 function getAuthUserId() {
-    return localStorage.getItem('auth-user-id');
+    return sessionStorage.getItem('auth-user-id');
 }
 
 

@@ -9,8 +9,10 @@ const GUEST_LOGINS = {
     }
 }
 
-const API_BASE_URL = 'https://coderr.schneider-remote.de/api/';
-const STATIC_BASE_URL = 'https://coderr.schneider-remote.de/';
+// const API_BASE_URL = 'https://coderr.schneider-remote.de/api/';
+// const STATIC_BASE_URL = 'https://coderr.schneider-remote.de/';
+const API_BASE_URL = 'http://localhost:8000/api/';
+const STATIC_BASE_URL = 'http://localhost:8000/';
 
 
 const LOGIN_URL = 'login/';
